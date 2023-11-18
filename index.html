@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS CHALLENGE</title>
+    <link rel="stylesheet" href="challenge-styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+
+    <main>
+      <form action="/challenge/" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-Mail Address</label>
+              <input type="email" email="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="usernumber">Your Phone Number</label>
+              <input
+                type="tel"
+                number="user-number"
+                id="usernumber"
+                required
+                minlength="5"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermessage">Your Message</label>
+          <textarea
+            id="usermessage"
+            rows="8"
+            name="message"
+            required
+            minlength="10"
+            maxlength="200"
+          ></textarea>
+        </section>
+
+        <section>
+          <label for="channel">How did you find us?</label>
+          <select id="channel" name="channel" required>
+            <option value="search">Web</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="facebook">Facebook</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="contact"
+                id="contact-call"
+                value="phone"
+              />
+              <label for="contact-call">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="contact"
+                id="contact-email"
+                value="email"
+              />
+              <label for="contact-email">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="contact" id="no-contact" value="none" />
+              <label for="no-contact">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <br />
+        <br />
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="accept-terms" required />
+            <label for="accept-terms">Accept Terms</label>
+          </div>
+        </section>
+
+        <section id="form-actions">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button class="btn-filled">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
